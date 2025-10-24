@@ -82,6 +82,29 @@ app.post('/api/form/submit', async (req, res) => {
   }
 });
 
+app.get('/api/forms', async (req, res) => {
+  try {
+    const forms = await FormData.find({});
+    res.json(forms);
+  } catch (err) {
+    res.status(500).json({ error: 'Error fetching forms' });
+  }
+});
+
+// update form status
+app.put('/api/forms/:id/complete', async (req, res) => {
+  try {
+    const form = await FormData.findByIdAndUpdate(
+      req.params.id,
+      { status: 'completed' },
+      { new: true }
+    );
+    res.json(form);
+  } catch (err) {
+    res.status(500).json({ error: 'Error updating status' });
+  }
+});
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
