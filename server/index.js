@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const Driver = require('./models/Driver');
 const Admin = require('./models/Admin');
+const FormData = require('./models/FormData');
 
 const app = express();
 app.use(cors());
@@ -68,6 +69,19 @@ app.post('/api/login/admin', async (req, res) => {
     res.status(500).json({ success: false, message: 'Server error' });
   }
 });
+
+
+// submit bus form
+app.post('/api/form/submit', async (req, res) => {
+  try {
+    const newForm = new FormData(req.body);
+    await newForm.save();
+    res.status(201).json({ success: true, message: 'Form submitted successfully' });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Error submitting form' });
+  }
+});
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
