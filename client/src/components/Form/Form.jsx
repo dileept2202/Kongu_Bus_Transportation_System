@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import bus1 from '../../assets/bus1.jpg';
+import './Form.css'
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -55,6 +57,7 @@ const Form = () => {
 
   return (
     <form className="formcont" onSubmit={handleSubmit}>
+      <div className="formbox">
       <div className="formhead">
         <h2>Bus Transportation Form</h2>
       </div>
@@ -104,12 +107,13 @@ const Form = () => {
 
         <div className="forminput">
           <h4>Description (reason for the damage):</h4>
-          <input type="text" name="description" value={formData.description} onChange={handleChange} placeholder="Description" />
+          <input type="text" name="description" className="forminputdes" value={formData.description} onChange={handleChange} placeholder="Description" />
         </div>
       </div>
 
       <div className="formsub">
         <button type="submit" className="formsubbut">Submit</button>
+      </div>
       </div>
     </form>
   );

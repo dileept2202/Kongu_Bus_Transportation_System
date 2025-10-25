@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import bus2 from '../../assets/bus2.jpg';
 
 const Login = () => {
   const [isDriver, setIsDriver] = useState(true);
@@ -41,43 +42,53 @@ const Login = () => {
   };
 
   return (
-    <div className="logcontain">
-      <div className="loghead">
-        <button
-          className={`logbutt ${isDriver ? "active" : ""}`}
-          onClick={() => setIsDriver(true)}
-        >
-          Driver Login
-        </button>
-        <button
-          className={`logbutt ${!isDriver ? "active" : ""}`}
-          onClick={() => setIsDriver(false)}
-        >
-          Admin Login
-        </button>
+    <div className="containerlogin">
+    <div className="logcontainer">
+      {/* Left side image */}
+      <div className="logimage">
+        <img src={bus2} alt="Bus" />
       </div>
 
-      <form className="inputs" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder={isDriver ? "Driver ID" : "Admin ID"}
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <div className="logsub">
-          <button className="logsubbut" type="submit">
-            Submit
+      {/* Right side login form */}
+      <div className="logform">
+        <div className="loghead">
+          <button
+            className={`logbutt ${isDriver ? "active" : ""}`}
+            onClick={() => setIsDriver(true)}
+          >
+            Driver Login
+          </button>
+          <button
+            className={`logbutt ${!isDriver ? "active" : ""}`}
+            onClick={() => setIsDriver(false)}
+          >
+            Admin Login
           </button>
         </div>
-      </form>
+
+        <form className="inputs" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder={isDriver ? "Driver ID" : "Admin ID"}
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <div className="logsub">
+            <button className="logsubbut" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
     </div>
   );
 };

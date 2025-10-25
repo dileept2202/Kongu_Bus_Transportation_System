@@ -1,0 +1,193 @@
+.homecont {
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  background-color: #f4fff8;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #004d99, #00a676);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.navbar h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.navank {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navank:hover {
+  color: #ccffcc;
+}
+
+.navlogbut {
+  background: #f4f4f4;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #043600;
+}
+
+.navlogbut:hover {
+  background-color: white;
+  color: #007f7f;
+}
+
+/* Carousel */
+.carousel img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-bottom: 5px solid #00a676;
+}
+
+/* About Us */
+.aboutus {
+  text-align: center;
+  padding: 60px 100px;
+  background-color: #e0f7ef;
+}
+
+.aboutus h2 {
+  color: #004d99;
+  margin-bottom: 20px;
+}
+
+.aboutus p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Transport Section */
+.transport {
+  padding: 70px 80px;
+  text-align: center;
+  background-color: #fafffd;
+}
+
+.transport h2 {
+  color: #004d99;
+  margin-bottom: 25px;
+}
+
+.transport .transimg {
+  width: 90%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.trans-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.trans-card {
+  background-color: #e7fdf5;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 45%;
+  padding: 25px;
+  transition: 0.3s ease;
+}
+
+.trans-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.trans-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.trans-card h4 {
+  color: #007f7f;
+  margin-bottom: 10px;
+}
+
+.trans-card p {
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 0.97rem;
+}
+
+/* Contact Section */
+.contact {
+  background: linear-gradient(90deg, #004d99, #00a676);
+  color: white;
+  text-align: center;
+  padding: 40px 10px;
+  margin-top: 60px;
+}
+
+.contact h3 {
+  margin-bottom: 12px;
+  color: #ccffcc;
+  font-weight: 600;
+}
+
+.contact p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .aboutus, .transport {
+    padding: 40px 20px;
+  }
+
+  .trans-card {
+    width: 90%;
+  }
+
+  .carousel img {
+    height: 300px;
+  }
+}

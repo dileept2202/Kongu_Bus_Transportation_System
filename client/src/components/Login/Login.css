@@ -1,0 +1,149 @@
+/* Main container */
+.containerlogin {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e6f7f0, #d4f1ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+/* Inner login container */
+.logcontainer {
+  width: 900px;
+  max-width: 95%;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  background-color: #ffffff;
+}
+
+/* Left side image */
+.logimage {
+  flex: 1;
+  overflow: hidden;
+}
+
+.logimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.logimage img:hover {
+  transform: scale(1.05);
+}
+
+/* Right side login form */
+.logform {
+  flex: 1;
+  padding: 40px 35px;
+  background: #e6f7f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header buttons */
+.loghead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  background: #d4f1ff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.logbutt {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #004d99;
+  transition: all 0.3s ease;
+}
+
+.logbutt.active {
+  background: linear-gradient(90deg, #004d99, #00a676);
+  color: white;
+  box-shadow: inset 0 0 5px rgba(255,255,255,0.4);
+}
+
+.logbutt:hover:not(.active) {
+  background-color: #cde8ff;
+}
+
+/* Input fields */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputs input {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  outline: none;
+  background: #f0fdfa;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.inputs input:focus {
+  background: #d4f1e0;
+  box-shadow: 0 0 0 2px #00a67650;
+}
+
+.inputs input:hover {
+  background: #e0f7eb;
+}
+
+/* Submit button */
+.logsub {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logsubbut {
+  width: 100%;
+  background: linear-gradient(90deg, #004d99, #00a676);
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.logsubbut:hover {
+  background: linear-gradient(90deg, #0072cc, #00c48c);
+  box-shadow: 0 4px 10px rgba(0,160,120,0.3);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .logcontainer {
+    flex-direction: column;
+  }
+  
+  .logimage {
+    height: 200px;
+  }
+
+  .logform {
+    padding: 30px 25px;
+  }
+}
