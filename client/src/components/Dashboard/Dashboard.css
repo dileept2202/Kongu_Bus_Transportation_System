@@ -8,7 +8,7 @@
   overflow-x: auto;
 }
 
-/* === Top Cards === */
+
 .cards {
   display: flex;
   gap: 25px;
@@ -20,7 +20,7 @@
   flex: 1;
   min-width: 200px;
   background: linear-gradient(135deg, #004d99, #00a676);
-  color: #fff;
+  color: white;
   padding: 25px 20px;
   border-radius: 20px;
   text-align: center;
@@ -37,15 +37,17 @@
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
+  color: #fff;
 }
 
 .card p {
   font-size: 28px;
   font-weight: 700;
+  color: #fff;
   margin: 0;
 }
 
-/* === Tables === */
+
 .pendingtable, .historytable {
   margin-bottom: 40px;
 }
@@ -59,7 +61,7 @@
 table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(0, 166, 118, 0.1); /* subtle light green background */
+  background: rgba(0, 166, 118, 0.1);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -87,7 +89,7 @@ tbody tr:hover {
   background: rgba(0, 77, 153, 0.1);
 }
 
-/* === Buttons === */
+
 button {
   padding: 8px 18px;
   border: none;
@@ -99,12 +101,16 @@ button {
   transition: all 0.3s ease;
 }
 
+.buton{
+  border-radius: 20px;
+}
+
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 77, 153, 0.4);
 }
 
-/* === Responsive Design === */
+
 @media (max-width: 1100px) {
   .cards {
     flex-direction: column;

@@ -44,12 +44,12 @@ const Login = () => {
   return (
     <div className="containerlogin">
     <div className="logcontainer">
-      {/* Left side image */}
+      
       <div className="logimage">
         <img src={bus2} alt="Bus" />
       </div>
 
-      {/* Right side login form */}
+      
       <div className="logform">
         <div className="loghead">
           <button

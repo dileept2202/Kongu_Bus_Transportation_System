@@ -21,7 +21,7 @@ const Dashboard = () => {
   const handleFinish = async (id) => {
     try {
       await axios.put(`http://localhost:5000/api/forms/${id}/complete`);
-      fetchForms(); // Refresh data after update
+      fetchForms(); 
     } catch (err) {
       console.error('Error updating form', err);
     }
@@ -30,7 +30,7 @@ const Dashboard = () => {
   const pendingForms = forms.filter(f => f.status.toLowerCase() !== 'completed');
   const completedForms = forms.filter(f => f.status.toLowerCase() === 'completed');
 
-  // Helper to format date
+  
   const formatDate = (dateStr) => {
     const date = new Date(dateStr);
     return date.toLocaleDateString();
@@ -86,7 +86,7 @@ const Dashboard = () => {
                   <td>{form.description}</td>
                   <td>{form.status}</td>
                   <td>
-                    <button onClick={() => handleFinish(form._id)}>Finished</button>
+                    <button className='buton' onClick={() => handleFinish(form._id)}>Finished</button>
                   </td>
                 </tr>
               ))

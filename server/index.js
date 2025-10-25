@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.send("Backend Server is running");
 });
 
-// get all drivers
+
 app.get('/api/drivers', async (req, res) => {
   try {
     const drivers = await Driver.find({});
@@ -28,7 +28,7 @@ app.get('/api/drivers', async (req, res) => {
   }
 });
 
-// get all admins
+
 app.get('/api/admins', async (req, res) => {
   try {
     const admins = await Admin.find({});
@@ -38,7 +38,7 @@ app.get('/api/admins', async (req, res) => {
   }
 });
 
-// driver login
+
 app.post('/api/login/driver', async (req, res) => {
   try {
     const { driverId, password } = req.body;
@@ -54,7 +54,7 @@ app.post('/api/login/driver', async (req, res) => {
   }
 });
 
-// admin login
+
 app.post('/api/login/admin', async (req, res) => {
   try {
     const { adminId, password } = req.body;
@@ -71,7 +71,6 @@ app.post('/api/login/admin', async (req, res) => {
 });
 
 
-// submit bus form
 app.post('/api/form/submit', async (req, res) => {
   try {
     const newForm = new FormData(req.body);
@@ -91,7 +90,7 @@ app.get('/api/forms', async (req, res) => {
   }
 });
 
-// update form status
+
 app.put('/api/forms/:id/complete', async (req, res) => {
   try {
     const form = await FormData.findByIdAndUpdate(

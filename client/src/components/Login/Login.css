@@ -21,7 +21,7 @@
   background-color: #ffffff;
 }
 
-/* Left side image */
+
 .logimage {
   flex: 1;
   overflow: hidden;
@@ -38,7 +38,7 @@
   transform: scale(1.05);
 }
 
-/* Right side login form */
+
 .logform {
   flex: 1;
   padding: 40px 35px;
@@ -48,7 +48,7 @@
   justify-content: center;
 }
 
-/* Header buttons */
+
 .loghead {
   display: flex;
   justify-content: space-between;
@@ -80,7 +80,7 @@
   background-color: #cde8ff;
 }
 
-/* Input fields */
+
 .inputs {
   display: flex;
   flex-direction: column;
@@ -107,7 +107,7 @@
   background: #e0f7eb;
 }
 
-/* Submit button */
+
 .logsub {
   text-align: center;
   margin-top: 10px;
@@ -133,7 +133,7 @@
   box-shadow: 0 4px 10px rgba(0,160,120,0.3);
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .logcontainer {
     flex-direction: column;

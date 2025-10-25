@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 
-// Image imports
+
 import bus1 from '../../assets/bus1.jpg';
 import bus2 from '../../assets/bus2.jpg';
 import bus3 from '../../assets/bus3.jpg';
@@ -16,7 +16,7 @@ import bus7 from '../../assets/bus7.png';
 const Home = () => {
   return (
     <div className='homecont'>
-      {/* Navbar */}
+
       <div className="navbar">
         <h1>Kongu Engineering College</h1>
         <div className="nav-links">
@@ -27,7 +27,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Carousel */}
+      
       <div className="carousel">
         <Carousel controls={false} indicators={false} interval={3000} fade>
           {[bus1, bus2, bus4, bus5].map((bus, index) => (
@@ -38,7 +38,7 @@ const Home = () => {
         </Carousel>
       </div>
 
-      {/* About Us */}
+      
       <section className="aboutus" id='about'>
         <h2>About Us</h2>
         <p>
@@ -54,7 +54,7 @@ const Home = () => {
         </p>
       </section>
 
-      {/* Transport Section */}
+      
       <section className="transport" id='transport'>
         <h2>Transport Facilities</h2>
         <img src={bus3} alt="Transport Facilities" className='transimg' />
@@ -70,7 +70,7 @@ const Home = () => {
         </p>
 
         <div className='trans-grid'>
-          {/* College Bus Routes */}
+        
           <div className='trans-card'>
             <h4>College Bus Routes</h4>
             <img src={bus6} alt="College Bus Routes" />
@@ -83,7 +83,6 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Public Transport */}
           <div className='trans-card'>
             <h4>Public Transport Services</h4>
             <img src={bus7} alt="Public Transport" />
@@ -100,7 +99,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      
       <footer className='contact' id='contact'>
         <h3>Contact</h3>
         <p>
